@@ -5,28 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1 id="title">freeCodeCamp Survey Form</h1>
-    <p id="description">Thank you for taking the time to help us improve the platform
+    <p id="description">
+      Thank you for taking the time to help us improve the platform
     </p>
-<form id="survey-form">
-  <label id="name-label">Name</label>
-  <input id="name" type="text" placeholder="Enter your name"></input>
+  <form id="survey-form">
+    <input id="name" type="text" placeholder="Enter your name"></input>
+    <label id="name-label" for="name">Name</label>
 
-  <label id="email-label">Email</label>
-  <input id="email" type="email" placeholder="Enter your Email"></input>
+    <label id="email-label" for="email">Email</label>
+    <input id="email" type="email" placeholder="Enter your Email"></input>
 
-  <label id="number-label">Age (Optional)</label>
-  <input id="number" type="number" min="5" max="99" placeholder="Age"></input>
+    <label id="number-label" for="number">Age (Optional)</label>
+    <input id="number" type="number" min="5" max="99" placeholder="Age"></input>
 
-  <label>What is your favorite feature?</label>
-  <select id="dropdown" >
-    <option>Content</option>
-    <option>Multiple Languages</option>
-  </select>
-  <label>What would you like to see improved?</label>
-  
-</form>
+    <label id="dropdown-label" for="dropdown">
+      Which option best describes your current role?
+    </label>
+    <select id="dropdown" >
+      <option>Student</option>
+      <option>Full Time Jobe</option>
+      <option>Full Time Learner</option>
+      <option>Prefer not to say</option>
+      <option>Other</option>
+    </select>
+
+    <p>Would you recommend freeCodeCamp to a friend?</p>
+    <input type="radio" id="definitely" name="recommendation">
+    <label for="definitely">Definitely</label>
+    
+    <input type="radio" id="maybe" name="recommendation">
+    <label for="maybe">Maybe</label>
+
+    <input type="radio" id="not-sure" name="recommendation">
+    <label for="not-sure">Not sure</label>
+    
+    <p>What would you like to see improved? (Check all that apply)</p>
+    <input type="checkbox" id="frontend" value="frontend">
+    <label for="frontend">Front-end Projects</label>
+
+    <input type="checkbox" id="backend" value="backend">
+    <label for="backend">Back-end Projects</label>
+
+    <input type="checkbox" id="challenges" value="challenges">
+    <label for="challenges">Challenges</label>
+
+    <p>Comments or suggestions?</p>
+    <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Enter your comment here..."></textarea>
+
+    <button id="submit">Submit</button>
+
+  </form>
 </body>
 </html>
