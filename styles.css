@@ -1,25 +1,111 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
 body {
     background-image: linear-gradient( 115deg, rgba(58, 58, 158, 0.8), rgba(58, 58, 158, 0.8) ), url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
     background-position: center top;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    font-family: sans-serif;
+    background-size: cover;
+    background-color: rgb(58, 58, 158);
+    font-size: 1.2em;
 }
-p {
-    margin: 0;
-    padding: 0;
-}
+
 #title {
     text-align: center;
     color: white;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-size: 2em;
 }
+
 #description {
     color: white;
     text-align: center;
+    margin-bottom: 30px;
+    font-size: 1em;
 }
+
+
 #survey-form {
     background-color: rgba(27, 27, 50, 0.8);
     color: white;
     padding: 40px;
     margin-left: 50px;
     margin-right: 50px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input {
+    border-radius: 5px;
+    padding: 10px;
+    font-size: .9em;
+}
+
+input:focus {
+    box-shadow: 0 0 7px rgb(36, 95, 255);
+    outline: 1px solid rgb(36, 95, 255);
+}
+
+
+select {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+select:focus {
+    box-shadow: 0 0 7px rgb(36, 95, 255);
+    outline: 1px solid rgb(36, 95, 255);
+}
+
+textarea {
+    resize: vertical;
+    font-size: 1.1em;
+}
+
+textarea:focus {
+    box-shadow: 0 0 7px rgb(36, 95, 255);
+    outline: 1px solid rgb(36, 95, 255);
+}
+
+button {
+    padding: 12px;
+    border-radius: 3px;
+    background-color: rgb(66, 173, 66);
+    color: white;
+    font-size: 1.2em;
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+.recommendations {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.improvement-checkboxes {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 5px;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+@media screen and (max-width: 600px) {
+    #survey-form {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
